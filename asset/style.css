@@ -1,0 +1,402 @@
+html, body {
+    overscroll-behavior: none;
+}
+
+body {
+    font-family: 'Crimson Text', sans-serif;
+}
+
+.hero {
+    position: relative;
+    height: 750px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero-text .highlight {
+    font-weight: bold;
+    color: #ffff17;
+    font-size: 1.7em;
+    font-family: 'Great Vibes', cursive;
+}
+
+.hero-text p {
+    font-weight: bold;
+    font-size: 3.5em;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    -webkit-text-stroke: 1px black; /* Untuk Chrome/Safari */
+    color: white; /* Warna teks utama */
+}
+
+.features .feature h3 {
+    font-size: 1em;
+    color: #8C0004;
+}
+.nav-link {
+    position: relative;
+    padding: 8px 15px;
+    margin: 0 5px;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: yellowgreen;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: yellowgreen !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffff;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.navbar {
+    transition: background-color 0.4s ease;
+    background-color: transparent;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.92); /* Warna latar saat scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link {
+    color: red !important;
+}
+.navbar.scrolled .nav-link:hover {
+    color: yellowgreen !important;
+}
+.navbar-brand img {
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled .navbar-brand img {
+    width: 80px;
+    height: 80px;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.icon-circle i {
+    font-size: 30px;
+    color: white;
+}
+
+.whatsapp-icon1 {
+    color: #25D366;
+    font-size: 60px;
+}
+
+.whatsapp-text {
+    color: #25D366;
+    font-weight: bold;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* lebih kecil dari sebelumnya */
+    margin-bottom: 20px;
+    max-width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.menu-card:hover {
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+    text-align: center; /* Menengahkan teks */
+    color: #8C0004;
+}
+
+.menu-item span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    margin-bottom: 10px; /* super rapat */
+    font-size: 0.95rem;
+}
+
+.menu-card img {
+    max-width: 100%;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.checkmark {
+    color: #8C0004;
+    margin-right: 8px;
+    font-size: 1.2rem; /* Ukuran lebih besar */
+    font-weight: bold; /* Tebal */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    
+}
+
+.divider {
+    border-top: 1px solid #dee2e6;
+    margin: 10px 0;
+}
+
+.order-btn {
+    background-color: #8C0004;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.order-btn:hover {
+    background-color: #B30009;
+    color: rgb(255, 255, 255);
+}
+
+.hero-header {
+    position: relative;
+    height: 200px; /* Atur sesuai tinggi gambar yang kamu mau */
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.whatsapp-icon {
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > *:last-child {
+    margin-top: auto;
+}
+/* ===== GLOBAL STYLES ===== */
+.lokasi {
+    position: relative;
+    overflow: hidden;
+}
+
+.lokasi::before {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.lokasi h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.lokasi h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #28a745;
+    border-radius: 2px;
+}
+
+/* ===== MAP CARD STYLES ===== */
+.lokasi iframe {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    transform: perspective(1000px) rotateX(0deg);
+    border: 3px solid white;
+}
+
+.lokasi iframe:hover {
+    transform: perspective(1000px) rotateX(10deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ===== LOCATION ICON STYLES ===== */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin: 0 auto 20px;
+}
+
+.icon-circle i {
+    font-size: 30px;
+    color: #28a745;
+    transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+}
+
+.icon-circle:hover i {
+    transform: rotate(10deg);
+}
+
+/* ===== WHATSAPP SECTION STYLES ===== */
+.whatsapp-icon1 {
+    font-size: 50px;
+    color: #25D366;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.whatsapp-text {
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.col-md-4:last-child:hover .whatsapp-icon1 {
+    transform: scale(1.2) rotate(5deg);
+    text-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.col-md-4:last-child:hover .whatsapp-text {
+    letter-spacing: 1px;
+    color: #25D366;
+}
+
+.feature img {
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    transform: scale(1);
+}
+
+.feature h3 {
+    margin-top: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.feature h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: #28a745;
+    transition: all 0.3s ease;
+}
+
+.feature:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+.feature:hover h3 {
+    color: #28a745;
+}
+
+.feature:hover h3::after {
+    width: 60%;
+}
