@@ -1,62 +1,79 @@
-html, body {
+:root {
+    /* Warna */
+    --merah-utama: #8C0004;
+    --merah-hover: #B30009;
+    --merah-terang: #A30000;
+    --kuning: #FFFF17;
+    --hijau: #25D366;
+    --hijau-tua: #28a745;
+    --putih: #ffffff;
+    --hitam: #000000;
+    --abu: #dee2e6;
+    --shadow-ringan: rgba(0,0,0,0.1);
+    --shadow-tebal: rgba(0,0,0,0.2);
+    
+    /* Font */
+    --font-utama: 'Crimson Text', sans-serif;
+    --font-judul: 'Poppins', sans-serif;
+    --font-dekor: 'Great Vibes', cursive;
+    --font-tangan: 'Pacifico', cursive;
+    
+    /* Transition */
+    --trans-cepat: all 0.3s ease;
+    --trans-sedang: all 0.4s ease;
+    --trans-panjang: all 0.5s ease;
+  }
+  
+  /* ========== GLOBAL & LAYOUT ========== */
+  html, body {
     overscroll-behavior: none;
-}
-
-body {
-    font-family: 'Crimson Text', sans-serif;
-}
-
-.hero {
-    position: relative;
-    height: 750px;
-    overflow: hidden;
-}
-
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 3px black;
-}
-
-.hero-text .highlight {
+    font-family: var(--font-utama);
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrapper > *:last-child {
+    margin-top: auto;
+  }
+  
+  /* ========== NAVBAR LENGKAP ========== */
+  .navbar {
+    transition: var(--trans-sedang);
+    background-color: transparent !important;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(255,255,255,0.92) !important;
+    box-shadow: 0 2px 10px var(--shadow-ringan);
+  }
+  
+  .navbar-brand img {
+    transition: var(--trans-sedang);
+  }
+  
+  .navbar.scrolled .navbar-brand img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--putih) !important;
+    font-size: 1.3em;
     font-weight: bold;
-    color: #ffff17;
-    font-size: 1.7em;
-    font-family: 'Great Vibes', cursive;
-}
-
-.hero-text p {
-    font-weight: bold;
-    font-size: 3.5em;
-    font-family: 'Poppins', sans-serif;
-    font-style: italic;
-    -webkit-text-stroke: 1px black; /* Untuk Chrome/Safari */
-    color: white; /* Warna teks utama */
-}
-
-.features .feature h3 {
-    font-size: 1em;
-    color: #8C0004;
-}
-.nav-link {
+  }
+  
+  .nav-link {
     position: relative;
     padding: 8px 15px;
     margin: 0 5px;
-    color: #ffffff !important;
-    transition: all 0.3s ease;
-}
-
-.nav-link::before {
+    transition: var(--trans-cepat);
+  }
+  
+  .nav-link::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -64,117 +81,116 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: yellowgreen;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover::before {
+    background: var(--kuning);
+    transition: var(--trans-cepat);
+  }
+  
+  .nav-link:hover::before {
     width: 80%;
-}
-
-.nav-link:hover {
-    color: yellowgreen !important;
-}
-
-.navbar-nav .nav-link {
-    color: #ffff;
-    font-size: 1.3em;
+  }
+  
+  .nav-link:hover {
+    color: var(--kuning) !important;
+  }
+  
+  /* Navbar Scroll States */
+  .navbar.scrolled .nav-link {
+    color: var(--merah-utama) !important;
+  }
+  
+  .navbar.scrolled .nav-link:hover {
+    color: var(--hijau) !important;
+  }
+  
+  .navbar.scrolled .nav-link::before {
+    background: var(--hijau);
+  }
+  
+  /* ========== HERO SECTION LENGKAP ========== */
+  .hero {
+    position: relative;
+    height: 750px;
+    overflow: hidden;
+  }
+  
+  .hero-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .hero img, .hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--putih);
+    text-shadow: 1px 1px 3px var(--hitam);
+  }
+  
+  .hero-text .highlight {
     font-weight: bold;
-}
-
-.navbar {
-    transition: background-color 0.4s ease;
-    background-color: transparent;
-    -webkit-transition: background-color 0.4s ease;
-    -moz-transition: background-color 0.4s ease;
-    -ms-transition: background-color 0.4s ease;
-    -o-transition: background-color 0.4s ease;
-}
-
-.navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.92); /* Warna latar saat scroll */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.scrolled .nav-link {
-    color: red !important;
-}
-.navbar.scrolled .nav-link:hover {
-    color: yellowgreen !important;
-}
-.navbar-brand img {
-    transition: all 0.4s ease;
-}
-
-.navbar.scrolled .navbar-brand img {
-    width: 80px;
-    height: 80px;
-}
-
-.icon-circle {
-    width: 100px;
-    height: 100px;
-    background-color: #aaa;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.icon-circle i {
-    font-size: 30px;
-    color: white;
-}
-
-.whatsapp-icon1 {
-    color: #25D366;
-    font-size: 60px;
-}
-
-.whatsapp-text {
-    color: #25D366;
+    color: var(--kuning);
+    font-size: 1.7em;
+    font-family: var(--font-dekor);
+  }
+  
+  .hero-text p {
     font-weight: bold;
-}
-
-.menu-card {
-    background-color: white;
+    font-size: 3.5em;
+    font-family: var(--font-judul);
+    font-style: italic;
+    -webkit-text-stroke: 1px var(--hitam);
+    color: var(--putih);
+  }
+  
+  /* ========== MENU CARD LENGKAP ========== */
+  .menu-card {
+    background-color: var(--putih);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* lebih kecil dari sebelumnya */
+    box-shadow: 0 2px 4px var(--shadow-ringan);
+    padding: 10px;
     margin-bottom: 20px;
     max-width: 300px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.menu-card:hover {
-    transform: translateY(-5px) scale(1);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-.menu-title {
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px var(--shadow-tebal);
+  }
+  
+  .menu-title {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: 'Pacifico', cursive;
-    text-align: center; /* Menengahkan teks */
-    color: #8C0004;
-}
-
-.menu-item span {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-}
-
-.menu-item {
+    font-family: var(--font-tangan);
+    text-align: center;
+    color: var(--merah-utama);
+  }
+  
+  .menu-item {
     display: flex;
     align-items: center;
-    justify-content: center; /* Memusatkan konten secara horizontal */
-    margin-bottom: 10px; /* super rapat */
+    justify-content: center;
+    margin-bottom: 10px;
     font-size: 0.95rem;
-}
-
-.menu-card img {
+  }
+  
+  .menu-item span {
+    font-family: var(--font-judul);
+    font-weight: bold;
+  }
+  
+  .menu-card img {
     max-width: 100%;
     max-height: 250px;
     width: auto;
@@ -182,25 +198,24 @@ body {
     object-fit: cover;
     padding-bottom: 1.5rem;
     border-radius: 8px;
-}
-
-.checkmark {
-    color: #8C0004;
+  }
+  
+  .checkmark {
+    color: var(--merah-utama);
     margin-right: 8px;
-    font-size: 1.2rem; /* Ukuran lebih besar */
-    font-weight: bold; /* Tebal */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-    
-}
-
-.divider {
-    border-top: 1px solid #dee2e6;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  .divider {
+    border-top: 1px solid var(--abu);
     margin: 10px 0;
-}
-
-.order-btn {
-    background-color: #8C0004;
-    color: white;
+  }
+  
+  .order-btn {
+    background-color: var(--merah-utama);
+    color: var(--putih);
     border: none;
     padding: 6px 12px;
     border-radius: 5px;
@@ -211,79 +226,28 @@ body {
     font-weight: bold;
     transition: background-color 0.3s;
     font-size: 0.95rem;
-}
-
-.order-btn:hover {
-    background-color: #B30009;
-    color: rgb(255, 255, 255);
-}
-
-.hero-header {
-    position: relative;
-    height: 200px; /* Atur sesuai tinggi gambar yang kamu mau */
-    overflow: hidden;
-}
-
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    z-index: 2;
-}
-
-.whatsapp-icon {
+  }
+  
+  .order-btn:hover {
+    background-color: var(--merah-hover);
+    color: var(--putih);
+  }
+  
+  .whatsapp-icon {
     margin-right: 6px;
     font-size: 1rem;
-}
-
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.wrapper > *:last-child {
-    margin-top: auto;
-}
-/* ===== GLOBAL STYLES ===== */
-.lokasi {
-    position: relative;
-    overflow: hidden;
-}
-
-.lokasi::before {
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(40, 167, 69, 0.1);
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.lokasi h1 {
-    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* ========== LOKASI LENGKAP ========== */
+  .lokasi h1 {
+    font-family: var(--font-judul);
     font-weight: 700;
     color: #333;
     position: relative;
     display: inline-block;
-}
-
-.lokasi h1::after {
+  }
+  
+  .lokasi h1::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -291,92 +255,95 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: #28a745;
+    background: var(--hijau-tua);
     border-radius: 2px;
-}
-
-/* ===== MAP CARD STYLES ===== */
-.lokasi iframe {
+  }
+  
+  .lokasi iframe {
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px var(--shadow-ringan);
+    transition: var(--trans-sedang);
     transform: perspective(1000px) rotateX(0deg);
-    border: 3px solid white;
-}
-
-.lokasi iframe:hover {
+    border: 3px solid var(--putih);
+  }
+  
+  .lokasi iframe:hover {
     transform: perspective(1000px) rotateX(10deg);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-/* ===== LOCATION ICON STYLES ===== */
-.icon-circle {
+    box-shadow: 0 15px 35px var(--shadow-tebal);
+  }
+  
+  .icon-circle {
     width: 80px;
     height: 80px;
-    background: white;
+    background: var(--putih);
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--shadow-ringan);
+    transition: var(--trans-cepat);
     margin: 0 auto 20px;
-}
-
-.icon-circle i {
+  }
+  
+  .icon-circle i {
     font-size: 30px;
-    color: #28a745;
-    transition: all 0.3s ease;
-}
-
-.icon-circle:hover {
+    color: var(--hijau-tua);
+    transition: var(--trans-cepat);
+  }
+  
+  .icon-circle:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
-}
-
-.icon-circle:hover i {
+  }
+  
+  .icon-circle:hover i {
     transform: rotate(10deg);
-}
-
-/* ===== WHATSAPP SECTION STYLES ===== */
-.whatsapp-icon1 {
+  }
+  
+  .whatsapp-icon1 {
     font-size: 50px;
-    color: #25D366;
-    transition: all 0.3s ease;
+    color: var(--hijau);
+    transition: var(--trans-cepat);
     display: inline-block;
-}
-
-.whatsapp-text {
+  }
+  
+  .whatsapp-text {
     font-weight: 600;
-    color: #333;
-    transition: all 0.3s ease;
-}
-
-.col-md-4:last-child:hover .whatsapp-icon1 {
+    color: var(--hijau);
+    transition: var(--trans-cepat);
+  }
+  
+  .col-md-4:last-child:hover .whatsapp-icon1 {
     transform: scale(1.2) rotate(5deg);
     text-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-}
-
-.col-md-4:last-child:hover .whatsapp-text {
+  }
+  
+  .col-md-4:last-child:hover .whatsapp-text {
     letter-spacing: 1px;
-    color: #25D366;
-}
-
-.feature img {
-    transition: all 0.5s ease;
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    color: var(--hijau);
+  }
+  
+  /* ========== FITUR LENGKAP ========== */
+  .feature img {
+    transition: var(--trans-panjang);
+    filter: drop-shadow(0 5px 15px var(--shadow-ringan));
     transform: scale(1);
-}
-
-.feature h3 {
+  }
+  
+  .features .feature h3 {
+    font-size: 1em;
+    color: var(--merah-utama);
+  }
+  
+  .feature h3 {
     margin-top: 20px;
     color: #333;
-    transition: all 0.3s ease;
+    transition: var(--trans-cepat);
     position: relative;
     display: inline-block;
-}
-
-.feature h3::after {
+  }
+  
+  .feature h3::after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -384,19 +351,185 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-    background: #28a745;
-    transition: all 0.3s ease;
-}
-
-.feature:hover img {
+    background: var(--hijau-tua);
+    transition: var(--trans-cepat);
+  }
+  
+  .feature:hover img {
     transform: scale(1.1) rotate(5deg);
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
-}
-
-.feature:hover h3 {
-    color: #28a745;
-}
-
-.feature:hover h3::after {
+  }
+  
+  .feature:hover h3 {
+    color: var(--hijau-tua);
+  }
+  
+  .feature:hover h3::after {
     width: 60%;
-}
+  }
+  
+  /* ========== CABANG LENGKAP ========== */
+  .menu-card1 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow-ringan);
+    transition: var(--trans-cepat);
+    height: 400px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .menu-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-tebal);
+  }
+  
+  .branch-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--trans-panjang);
+  }
+  
+  .menu-card1:hover .branch-img {
+    transform: scale(1.05);
+  }
+  
+  .location-tag {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--putih);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 0;
+    z-index: 3;
+    background-color: var(--merah-utama);
+    width: auto;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px var(--shadow-ringan);
+    opacity: 0;
+    transition: var(--trans-cepat);
+  }
+  
+  .menu-card1:hover .location-tag {
+    opacity: 1;
+    bottom: 80px;
+  }
+  
+  .menu-card1 h4 {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--putih);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 0;
+    z-index: 2;
+    background-color: var(--merah-utama);
+    box-shadow: 0 2px 4px var(--shadow-ringan);
+    transition: var(--trans-cepat);
+  }
+  
+  .menu-card1:hover h4 {
+    background-color: var(--merah-terang);
+  }
+  
+  .judul-cabang {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: var(--font-tangan);
+    color: var(--merah-utama);
+  }
+  
+  .judul-kecil {
+    margin-bottom: 0.5rem;
+  }
+  
+  .judul-besar {
+    margin: 0;
+  }
+  
+  /* ========== KONTAK LENGKAP ========== */
+  .col-md-6 {
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .col-md-6 h4,
+  .col-md-6 label {
+    color: var(--hitam);
+    font-weight: bold;
+  }
+  
+  .col-md-6 .form-control {
+    background-color: transparent;
+    border: 1px solid var(--hitam);
+    color: var(--hitam);
+  }
+  
+  .col-md-6 .form-control:focus {
+    background-color: transparent;
+    border-color: var(--merah-utama);
+    color: var(--hitam);
+    box-shadow: none;
+  }
+  
+  .col-md-6 .contact-options label {
+    display: block;
+    color: var(--hitam);
+    margin-bottom: 5px;
+  }
+  
+  .col-md-6 input[type="radio"] {
+    margin-right: 5px;
+    accent-color: var(--merah-utama);
+  }
+  
+  .col-md-6 .btn-primary {
+    background-color: var(--merah-utama);
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .col-md-6 .btn-primary:hover {
+    background-color: var(--merah-hover);
+  }
+  
+  .info-kantor {
+    border: none solid var(--hitam);
+    color: var(--hitam);
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    position: relative;
+    box-shadow: 0 0 8px 8px rgba(0,0,0,0.25);
+    margin: 12px;
+  }
+  
+  .info-kantor h5 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .info-kantor i {
+    margin-right: 8px;
+    color: var(--hitam);
+  }
+  
+  .service-hours p {
+    margin: 1px;
+  }

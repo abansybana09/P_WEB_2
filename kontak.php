@@ -1,36 +1,58 @@
 <?php include('include/header.php'); ?>
+
 <header class="hero-header">
-    <div class="overlay-content">
-    </div>
+    <div class="overlay-content"></div>
     <img src="img/bakar.jpg" alt="Ayam Bakar Background" class="hero-bg">
 </header>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Kontak Kami</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Informasi Kontak</h4>
-                <p><strong>Alamat:</strong> Jl. Contoh No. 123, Kota Contoh</p>
-                <p><strong>Email:</strong> info@contoh.com</p>
-                <p><strong>Telepon:</strong> +62 812 3456 7890</p>
-            </div>
-            <div class="col-md-6">
-                <h4>Formulir Kontak</h4>
-                <form action="proses_kontak.php" method="POST">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Pesan</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Kirim</button>
-                </form>
+
+<div class="container my-5">
+    <div class="row">
+        <!-- Formulir Kontak -->
+        <div class="col-md-6 mb-4">
+            <h4>Formulir Kontak</h4>
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama *</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Telepon *</label>
+                    <input type="tel" class="form-control" name="telephone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3 contact-options">
+                    <label class="form-label">Pilih salah satu sesuai tujuan anda</label>
+                    <label><input type="radio" name="purpose" value="Catering"> Catering</label>
+                    <label><input type="radio" name="purpose" value="Kerjasama"> Kerjasama/Partnership</label>
+                    <label><input type="radio" name="purpose" value="Lainnya"> Lainnya</label>
+                </div>
+                <div class="mb-3">
+                 <label for="message" class="form-label">Isi Pesan *</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- Info Kantor -->
+        <div class="col-md-6 mb-4">
+    <div class="info-kantor">
+        <h5><strong>KANTOR</strong></h5>
+        <p><i class="fas fa-map-marker-alt"></i> Jln. Jendral Sudirman No. 45 RT 03 RW 07</p>
+        <p><i class="fab fa-whatsapp"></i> 089630152631 (Ahmad Fauzil Adhim)</p>
+        <p><i class="fas fa-envelope"></i> info@miemanyala.com</p>
+        <div class="service-hours mt-3">
+            <p><strong>Service Hours :</strong></p>
+            <p>Senin - Sabtu</p>
+            <p>Fast Response Chat 10.00 - 22.00</p>
+            <p>Pengiriman Di Sesuaikan dengan<br>Permintaan Costumer</p>
+        </div>
             </div>
         </div>
     </div>
-    <?php include('include/footer.php'); ?>
+</div>
+
+<?php include('include/footer.php'); ?>
