@@ -13,22 +13,28 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-md-4">
-                <div class="feature">
-                    <img src="img/catering.png" alt="Logo Warung Mang" width="161" height="159" class="rounded-circle">
-                    <h3>Catering Service</h3>
-                </div>
+                <a href="Box_Catering.php" class="feature-link">
+                    <div class="feature">
+                        <img src="img/catering.png" alt="Logo Warung Mang" width="161" height="159" class="rounded-circle">
+                        <h3>Catering Service</h3>
+                    </div>
+                </a>
             </div>
             <div class="col-md-4">
-                <div class="feature">
-                    <img src="img/paket.png" alt="Logo Warung Mang" width="161" height="159" class="rounded-circle">
-                    <h3>Paket Nasi Box</h3>
-                </div>
+                <a href="lokasi.php" class="feature-link">
+                    <div class="feature">
+                        <img src="img/paket.png" alt="Logo Warung Mang" width="161" height="159" class="rounded-circle">
+                        <h3>Paket Nasi Box</h3>
+                    </div>
+                </a>
             </div>
             <div class="col-md-4">
-                <div class="feature">
-                    <img src="img/kerjasama.png" alt="Logo Warung Mang" width="161" height="159" class="rounded-circle">
-                    <h3>Kerjasama</h3>
-                </div>
+                <a href="kontak.php" class="feature-link">
+                    <div class="feature">
+                        <img src="img/kerjasama.png" alt="Logo Warung Mang" width="161" height="159" class="rounded-circle">
+                        <h3>Kerjasama</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

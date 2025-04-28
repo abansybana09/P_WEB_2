@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="asset/style.css">
+    
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="project.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="Menu.php">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Box Catering.php">Box Catering</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Box_Catering.php">Box Catering</a></li>
                         <li class="nav-item"><a class="nav-link" href="Lokasi.php">Lokasi</a></li>
                         <li class="nav-item"><a class="nav-link" href="Kontak.php">Kontak</a></li>
                     </ul>
