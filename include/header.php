@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/cabang.css">
+    <link rel="stylesheet" href="asset/fitur.css">
+    <link rel="stylesheet" href="asset/hero.css">
+    <link rel="stylesheet" href="asset/kontak.css">
+    <link rel="stylesheet" href="asset/lokasi.css">
+    <link rel="stylesheet" href="asset/navbar.css">
 </head>
 <body>
     <header>
