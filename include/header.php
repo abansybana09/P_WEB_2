@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="asset/kontak.css">
     <link rel="stylesheet" href="asset/lokasi.css">
     <link rel="stylesheet" href="asset/navbar.css">
-    
+    <link rel="stylesheet" href="asset/footer.css">
 </head>
 <body>
     <header>
