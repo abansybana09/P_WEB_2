@@ -13,7 +13,7 @@
                                 <div class="menu-item">
                                         <i class="fa-solid fa-check checkmark"></i><span>Nasi</span>
                                 </div>
-                                <div class="menu-item">
+                                <div class="menu-item">  
                                         <i class="fa-solid fa-check checkmark"></i><span>Ayam Goreng</span>
                                 </div>
                                 <div class="menu-item">
