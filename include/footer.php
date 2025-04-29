@@ -35,8 +35,8 @@
                 </div>
                 <div class="footer-links">
                     <a href="about.php" class="text-white mx-2">Tentang Kami</a>
-                    <a href="menu.php" class="text-white mx-2">Menu</a>
-                    <a href="lokasi.php" class="text-white mx-2">Lokasi</a>
+                    <a href="Menu.php" class="text-white mx-2">Menu</a>
+                    <a href="Lokasi.php" class="text-white mx-2">Lokasi</a>
                     <a href="kontak.php" class="text-white mx-2">Kontak</a>
                 </div>
             </div>
@@ -56,7 +56,6 @@
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script>
     // Efek scroll navbar
     window.addEventListener('scroll', function() {
@@ -90,3 +89,5 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
     });
 </script>
+</body>
+</html>
